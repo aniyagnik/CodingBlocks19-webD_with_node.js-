@@ -1,0 +1,19 @@
+*{
+    font-size:20px;
+    font-family:monospace;
+    background-color: lavenderblush;
+}
+ol{
+    position:relative;
+}
+ li > ol{
+    position: absolute;
+    visibility:hidden;
+}
+
+
+li:hover > ol{
+    visibility:visible;
+}
+
+

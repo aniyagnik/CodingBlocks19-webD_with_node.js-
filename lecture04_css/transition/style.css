@@ -1,0 +1,18 @@
+div{
+    height:100px;
+    width: 300px;
+    center-align:center;
+    background-color: goldenrod;
+    margin:20px;
+    box-shadow: 2px 10px 10px black;
+}
+#div1:hover{
+    transform: scale(3);
+    border :2px solid black;
+
+    transition : transform 2s,border 2s;
+}
+#div2:hover{
+    width:700px;
+    transition : width 2s;
+}

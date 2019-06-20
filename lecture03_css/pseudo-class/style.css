@@ -1,0 +1,23 @@
+a:hover{
+    color : blue;
+}
+a:active{
+    color:red;
+}
+p:first-child{
+ background-color: crimson;
+}
+
+p:last-child{
+    background-color:green;
+   }
+*
+{
+    color:yellow;
+}
+a:last-child{
+    background: blueviolet;
+}
+a:first-child{
+    background: brown;
+}

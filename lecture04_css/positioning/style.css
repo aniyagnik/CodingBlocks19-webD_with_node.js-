@@ -1,0 +1,41 @@
+div{
+    height: 150;
+    width: 400px;
+    margin:20px;
+    background-color:yellowgreen;
+    text-align: center;
+    border: solid 3px black;
+}
+#div1{
+    position: relative;              /*doesn't leaves it's position(it's initial position is not vacated)*/
+    top:100px;
+    left:100px;
+
+}
+#div2{
+    position: fixed;  /*leaves it's position(it's initial position is vacated)*/
+    top:-10px;
+    left:300px;
+
+}
+/*embereon*/
+#div3{
+    position: relative;    /*does not leave it's position*/
+    top:-10px;
+    left:700px;
+
+}
+#div4{
+    position: sticky;
+    top: 10px;
+    left:70%;
+}
+
+#div0{
+    position: relative;
+    /*top: 10px;*/
+}
+#div5{
+    position:absolute;  /*positioning related*/
+    
+}

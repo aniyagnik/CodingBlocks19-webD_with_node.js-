@@ -1,0 +1,39 @@
+div{
+    height: 100px;
+    width: 100px ;
+    background-color: cyan;
+    text-align:center;   
+    margin:40px;
+}
+#div1{
+    transform : translate(300px,10px);
+}
+
+#div2{
+    transform : scale(0.6);
+}
+#div3{
+    transform : rotate(230deg);           /*rotate along z-axis*/
+}
+#div4{
+    transform : rotateY(150deg);   /*rotate along y-axis*/
+}
+
+
+#div5{
+    transform : skewY(30deg);             /*skew along y-axis*/
+}
+
+#div6{
+    transform : translate(70px) ;
+    traNsform : rotate(150deg);
+}
+
+#div7{
+    transform : translate(70px) rotate(50deg);
+}
+
+
+#div8{
+    transform :  rotate(50deg) translate(70px);
+}

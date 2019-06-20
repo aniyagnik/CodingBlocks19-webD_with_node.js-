@@ -1,0 +1,19 @@
+*{
+    font-size:40px;
+    font-family:monospace;
+    margin:10px;
+    background-color: rgba(57, 214, 65, 0.705);
+}
+ol{
+    width:200px
+}
+li  ol{
+        display:none;
+}
+
+li:hover> ol{
+    display: block;
+}
+
+
+

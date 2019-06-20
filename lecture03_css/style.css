@@ -1,0 +1,45 @@
+p
+{
+    color : blueviolet;
+    background : rgb(171, 207, 216);
+}
+.para1
+{
+    color: green;
+    background :black; 
+}
+*
+{
+    background :rgb(219, 223, 189);
+    font-size:20;
+    margin-left:10px;
+}
+#p1
+{
+    color :yellow;
+}
+button:hover{
+    color:blue;
+    background:white;
+    size: 1000px;
+}
+
+.container{
+    height:30px;
+    width:70px;
+    border: solid 2x black;
+    margin:200px;
+    padding: 10px;
+    background-color:rgb(0, 0, 0);
+    color : white;
+    font-family:gigi;
+    text-align:center;
+    box-align: center;
+}
+
+.container:hover{
+    font-family:algerian;
+   padding: 10px;
+    background-color:rgb(255, 255, 255);
+    color : black;
+}

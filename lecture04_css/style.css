@@ -1,0 +1,15 @@
+div{
+    height: 100px;
+    width: 100px ;
+    background-color: cyan;
+    
+}
+div:active{
+    display :none;
+}
+.item{
+    height: 100px;
+    width: 200px ;
+    background-color: green;
+    display: inline-block;
+}

@@ -1,0 +1,14 @@
+div p{
+    color :red;
+}
+div > p{
+    background-color: green;
+}
+
+div ~p{
+    margin:20px;
+    background-color: rgb(187, 18, 18);
+}
+div + p{
+    background-color: rgb(209, 140, 12);
+}
