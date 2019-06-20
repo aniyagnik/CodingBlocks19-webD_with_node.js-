@@ -4,6 +4,14 @@
     margin:10px;
     /*background-color: rgba(57, 214, 65, 0.705);*/
 }
+body{background-color: rgb(107, 97, 97)}
+.nav{
+    margin-top:2%;
+    background-color: black;
+    width:58%;
+    height:12%;
+    position:fixed;
+}
 #l1{position:fixed;
 border: 2px solid crimson;}
 
@@ -18,7 +26,7 @@ a{
     text-decoration: none;
     color:whitesmoke;
 }
-
+a:hover{color:black;}
 li >ol{
         display:none;
         position: relative;
@@ -33,17 +41,18 @@ li{
 }
 
 li>ol>li{
-    background-color: rgb(146, 165, 199);
+    background-color: crimson;
 }
 
-li>ol>li>ol>li{background-color: rgb(250, 108, 57);}
+li>ol>li>ol>li{background-color:rgb(243, 168, 168);}
 
 
 li:hover{
     background-color: gold;
     display:block;
     box-shadow: 2px 2px 10px black;
-    transition :backgrond-color 2s;
+    color:crimson;
+    transition :color 1s,display 2s, background-color 0.5s;
 }
 
 li:hover> ol{
