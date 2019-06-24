@@ -1,0 +1,14 @@
+.container{
+    height:500px;
+    width:500px;
+    background-color: aqua;
+    display:flex;
+
+}
+
+.item{
+    width:100px;
+    height: 100px;
+    background-color: blue;
+    margin:20px;
+}
