@@ -1,8 +1,9 @@
 .container{
-    height:500px;
-    width:500px;
+    height:150px;
+    width:100%;
     background-color: aqua;
     display:flex;
+    
 
 }
 
@@ -11,4 +12,11 @@
     height: 100px;
     background-color: blue;
     margin:20px;
+    flex-grow:1;
+
+}
+
+
+.item2{
+    flex-grow:2;
 }
