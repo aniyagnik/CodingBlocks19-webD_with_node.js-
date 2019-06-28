@@ -7,5 +7,5 @@ function compare(a,b){
     return true
     else return false
 }
-arr.compare()
+arr.sort(compare)
 console.log(arr)
