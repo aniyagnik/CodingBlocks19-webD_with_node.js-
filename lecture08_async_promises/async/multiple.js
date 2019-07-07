@@ -11,7 +11,7 @@ setTimeout(()=>{
 
 setTimeout(()=>{
     console.log(2)
-},000)
+},1000)
 
 
 //first-in first-out
@@ -26,4 +26,4 @@ setTimeout(()=>{
 
 setTimeout(()=>{
     console.log(3)
-},000)
+},2000)

@@ -1,0 +1,14 @@
+{
+  "name": "packages",
+  "version": "1.0.0",
+  "description": "first try",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anirudh yagnik",
+  "license": "ISC",
+  "dependencies": {
+    "is-natural-number": "^4.0.1"
+  }
+}
