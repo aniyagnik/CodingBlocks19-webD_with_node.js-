@@ -1,0 +1,21 @@
+<!--changes in views reflect without server reload-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>about</title>
+</head>
+<body>
+    {{>navbar name =discription}}           <!--pass array-->
+    name:  {{{name}}}
+    <p>discription:  {{discription}}</p>
+
+    <a href="/">back</a>
+    
+    <script>
+       // window.alert('hello fellows!!!')    never use window.alert code here  bad user experience cannot switch tabs in browser (check in modals in js)
+    </script>
+</body>
+</html>
