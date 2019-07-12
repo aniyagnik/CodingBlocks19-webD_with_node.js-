@@ -42,13 +42,15 @@ function add_info(){
         }
         console.log('added to file')
     })
+    
     fs.writeFile('./input.json',JSON.stringify(todos,null,4),err=>{
         if(err){
             console.log('error!!!')
             return
         }
         console.log('added to file')
-    })
+    
+})
 }
 route.delete('/:id', (req, res) => {
     const todoToDelete = todos.find(todo => todo.id == req.params.id)
