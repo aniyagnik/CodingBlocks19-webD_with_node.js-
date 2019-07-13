@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>trverse,replace,remove</title>
+</head>
+<body>
+   <ul>
+       <li>one
+           <ol>
+               <li>oa</li>
+               <li>ob</li>
+               <li>oc</li>
+           </ol>
+       </li>
+       
+       <li>two
+           <ol>
+              <li>ta</li>
+              <li>tb</li>
+              <li>tc</li>
+           </ol>
+       </li>
+       <li>three</li>
+       <li>four</li>
+   </ul>
+</body>
+</html>
+
+<!--
+used
+goto any element you want
+right click and goto use in console option(it gives temp0)
+
+let tb=temp0
+undefined
+
+tb.parentElement
+<ol>
+
+tb.parentElement.parentElement
+<li>
+
+tb.parentElement.parentElement.previousElementSibling
+<li>
+
+tb.parentElement.parentElement.previousElementSibling.children
+HTMLCollection [ ol]
+
+tb.parentElement.parentElement.previousElementSibling.children[0]
+<ol>
+
+tb.parentElement.parentElement.previousElementSibling.children[0].children[2]
+<li>
+
+ tb.previousElementSibling
+<li>  //points to to
+
+tb.nextElementSibling
+<li>   //points tc
+
+tb.parentElement.remove(tb)
+undefined            //meroves tb's parent element from document
+
+tb.parentElement
+<ol>        //element exist but not shown in document
+ 
+tb.parentElement.parentElement
+null     //as tb's parent element doesn't exixt in document we cannot access it's parent element    
+
+let three=temp1
+undefined
+
+three.appendChild(tb.parentElement)
+<ol>
+    //output
+
+    one
+        oa
+        ob
+        oc
+    two
+    three
+        ta
+        tb
+        tc
+    four
+
+-->

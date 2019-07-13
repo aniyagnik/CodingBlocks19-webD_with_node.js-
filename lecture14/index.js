@@ -1,66 +1,99 @@
-const Sequelize=require('sequelize')
-const sequelize=new Sequelize({
-    dialect:'sqlite',
-    storage:'./db.sqlite'
+const Sequelize = require('sequelize')
+const express = require('express')
+const app = express()
+
+const sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: './db.sqlite'
 });
-const express=require('express')
-const app=express()
-let Bands=sequelize.define('Bands',{              //attribute
-    id:{                             //column
-        //allowNull:false,
-        primaryKey:true,
-        type:Sequelize. INTEGER,
-        autoIncrement:true 
-    },
-    title:{
-        type:Sequelize.STRING,
-        allowNull:false
-    },
-    striked:{
-        type:Sequelize.BOOLEAN,
-        defaultValue:false,
-        allowNull:false 
+
+
+const Bands = sequelize.define('bands', {
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  title: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  striked: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false,
+    allowNull: false
+  }
+})
+
+app.use(express.urlencoded({extended: true}))
+
+const stringToBool = val => val == "true"
+
+app.get('/', (req, res) => {
+  const filter = req.query || {}
+  if (typeof filter.striked != 'undefined') {
+    filter.striked = stringToBool(filter.striked)
+  }
+
+  Bands.findAll({
+    where: filter
+  }).then(bands => {
+    res.json(bands)
+  })
+})
+
+app.post('/', (req, res) => {
+  Bands.create({
+    title: req.body.title
+  }).then(band => {
+    res.json(band)
+  })
+})
+
+app.patch('/:id', (req, res) => {
+  Bands.update(req.body, {
+    where: {
+      id: req.params.id
     }
+  }).then(band => {
+    res.sendStatus(204)
+    //res.json(band)
+  })
 })
 
-Bands.sync().then(()=>{
-    app.listen(300)
-})          //create table if it not exist 
-//bands.sync({force:true})  create table and if it exist dletr it with its data and then create 
-Bands.findAll().then(bands=>{
-    //bands.map(b=>(b.id)
-//    console.log(bands)
-
+app.delete('/', (req, res) => {
+  Bands.destroy({
+    where: {
+      striked: true
+    }
+    //restartIdentity:true	
+  }).then(band=> {
+      res.json(band)
+    res.sendStatus(204)
+  }).catch(err => {
+    console.log(err)
+    res.sendStatus(500)
+  })
 })
 
-app.get('/',(req,res)=>{
-    Bands.findAll().then(bands=>{
-        res.json(bands)
-    })
+//create table if it not exist 
+Bands.sync().then(() => { 
+  app.listen(300,function () {
+    console.log("Listening on 300")
+})
 })
 
-
-app.post('/',(req,res)=>{
-    Bands.create({
-        title: req.body.title
-    }).then(band=>{
-        res.json(band)
-    })
-})
-
-app.patch('/:id',(req,res)=>{
-    Bands.update({
-        title:req.body.title,
-    },where(bands.id===req.params.id))
-    .then(bands=>{
-        res.json(bands)
-    })
-
-})
+// bands.sync({force:true})  create table and if it exist delete it with its data and then create 
 
 
-sequelize.authenticate().then(()=>{
-    console.log('connected!')
-}).catch(err=>{
-    console.log('not connected!')
-})
+// sequelize.authenticate().then(() => {
+//   console.log("Connected!")
+// }).catch(err => {
+//   console.log("Not Connected", err)
+// })
+
+
+
+
+
+

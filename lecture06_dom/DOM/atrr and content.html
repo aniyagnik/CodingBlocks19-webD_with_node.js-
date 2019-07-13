@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>attribute and content</title>
+</head>
+<body>
+    <p class='para'>this is para 1</p>
+    <p style='color:red' class='para'>this is <b>para</b> 2</p>
+    <p id='p1'>this is para 3</p>
+    <p class='para' id='p1'> this is para 4</p>
+</body>
+</html>
+
+<!--
+    javascript
+
+document.getElementsByTagName('p')
+HTMLCollection(4) [p.para, p.para, p#p1, p#p1.para, p1: p#p1]0: p.para1: p.para2: p#p13: p#p1.paralength: 4p1: p#p1__proto__: HTMLCollection
+
+document.getElementsByClassName('para')
+HTMLCollection(3) [p.para, p.para, p#p1.para, p1: p#p1.para]0: p.para1: p.para2: p#p1.paralength: 3p1: p#p1.para__proto__: HTMLCollection
+
+document.getElementById('p1')
+<p id=​"p1">​this is para 3​</p>​
+
+document.getElementsById('p1')
+VM442:1 Uncaught TypeError: document.getElementsById is not a function
+at <anonymous>:1:10
+(anonymous) @ VM442:1
+
+document.getElementsByClassName('para')[0]
+<p class=​"para">​this is para 1​</p>​
+
+document.getElementsByClassName('para')[5]
+undefined
+
+para3=document.getElementsByClassName('para')[2]
+<p class=​"para" id=​"p1">​ this is para 4​</p>​
+
+para3.innerText
+"this is para 4"
+
+document.getElementsByClassName('para')[1].innerHTML
+"this is <b>para</b> 2"
+
+document.getElementsByClassName('para')[1].outerHTML
+"<p style="color:red" class="para">this is <b>para</b> 2</p>"
+
+para3.innerText="some new data"
+"some new data"
+
+pid3=document.getElementById('p1')
+<p id=​"p1">​this is para 3​</p>​
+
+pid3.setAttribute('contenteditable',true)
+undefined
+
+pid3.setAttribute('spellchecker',false)
+undefined
+
+pid3.setAttribute('spellcheck',false)
+undefined
+-->
