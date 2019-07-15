@@ -1,0 +1,17 @@
+25/6/2019
+hashmap
+THIS  operator IN JS ?
+what is event loop(vide0 :26:53 -philip roberts)
+you don't know js
+1.
+proto available to object
+prototype available to constructor
+x=new class()
+x__proto__==class.prototype  //always true
+//window is special type of obj .
+
+//try console.log(this)  //window
+if we dont use new it doenst creATE A NEW object. values stored in window
+make another object and last one contents are lost
+new gives new mem loacation
+
