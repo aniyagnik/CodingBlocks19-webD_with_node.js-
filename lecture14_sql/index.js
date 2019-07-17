@@ -7,7 +7,7 @@ const sequelize = new Sequelize({
   storage: './db.sqlite'
 });
 
-
+//Bands is class name and bands is table name
 const Bands = sequelize.define('bands', {
   id: {
     type: Sequelize.INTEGER,
